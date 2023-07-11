@@ -1,5 +1,5 @@
 package br.edu.ifba.saj.ads.poo;
 
-public class AutenticacaoInvalidaException {
-
+public class AutenticacaoInvalidaException extends Exception{
+    
 }
