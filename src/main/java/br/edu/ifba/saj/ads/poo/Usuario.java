@@ -19,7 +19,7 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    public boolean equals (Usuario busca){
-        return (this.login.equals(busca.login) && this.senha.equals(busca.senha));     
+    public boolean equals (String loginbusca){
+        return (this.login.equals(loginbusca));     
     }
 }
