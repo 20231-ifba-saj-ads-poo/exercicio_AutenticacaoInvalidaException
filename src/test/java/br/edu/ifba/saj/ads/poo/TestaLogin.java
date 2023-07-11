@@ -20,16 +20,13 @@ public class TestaLogin {
     public void testLoginOk() throws AutenticacaoInvalidaException { 
         String login = "login";
         String senha = "senha";
-        Usuario u = new Usuario(login,senha);
-        BancoDeUsuarios.addUsuario(u);
-        BancoDeUsuarios.autenticar(login, senha);        
+        BancoDeUsuarios.autenticar(login, senha);   
     }
         
     @Test(expected = AutenticacaoInvalidaException.class)
     public void testLoginException() throws AutenticacaoInvalidaException { 
         String login = "login9";
         String senha = "senha9";
-        Usuario u = new Usuario(login,senha);
         BancoDeUsuarios.autenticar(login, senha);        
     }
 }
