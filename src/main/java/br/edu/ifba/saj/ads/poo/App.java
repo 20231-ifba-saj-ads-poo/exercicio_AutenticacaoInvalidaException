@@ -8,6 +8,7 @@ package br.edu.ifba.saj.ads.poo;
 public class App {
     
     public static void main(String[] args) {
-        
+        Usuario usuario = new Usuario("Log","senha");
+        BancoDeUsuarios.addUsuario(usuario);
     }    
 }
