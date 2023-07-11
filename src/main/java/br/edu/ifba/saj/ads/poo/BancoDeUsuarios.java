@@ -22,12 +22,13 @@ public class BancoDeUsuarios {
     }
 
     public static void autenticar(String login, String senha) {
+        Usuario userbusca = new Usuario(login, senha);
         try {
             for (int i = 0; i < list.size(); i++) {
-                if (list.get(i).getLogin().equals(login)){
-                 System.out.println ("Usuario "+ login + "Encontrado");
-                }else {
-                    throw new AutenticacaoInvalidaException ("Usuario "+ login + "não foi encontrado ou a senha está errada");
+                if (list.get(i).equals(userbusca)) {
+                    System.out.println("Usuario " + login + "Encontrado");
+                } else {
+                    throw new AutenticacaoInvalidaException("Usuario " + login + "não foi encontrado ou a senha está errada");
                 }
             }
         } catch (AutenticacaoInvalidaException e) {
