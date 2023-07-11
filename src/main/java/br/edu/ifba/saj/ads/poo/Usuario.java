@@ -20,5 +20,8 @@ public class Usuario {
     public void setTxtSenha(String txtSenha) {
         this.txtSenha = txtSenha;
     }
+    public Object getLogin() {
+        return null;
+    }
     
 }
