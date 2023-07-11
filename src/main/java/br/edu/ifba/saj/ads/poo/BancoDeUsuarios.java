@@ -11,12 +11,9 @@ public class BancoDeUsuarios {
 
     public static void autenticar(String login, String senha) throws AutenticacaoInvalidaException {
         for (Usuario user:bancoUsuarios) {
-            String teste = user.getSenha();
-            String teste1 = user.getLogin();
-            if((user.getSenha().equals(senha)) && (user.getLogin().equals(login))){
-                //Tudo OK
-            }else
+            if(!(user.getSenha().equals(senha)) && (user.getLogin().equals(login))){
                 throw new AutenticacaoInvalidaException(login);
+            }
         }
     }
 }
