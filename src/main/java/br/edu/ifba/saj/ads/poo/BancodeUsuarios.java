@@ -1,20 +1,30 @@
 package br.edu.ifba.saj.ads.poo;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class BancodeUsuarios {
-    public static ArrayList<Usuario> Users = new ArrayList();
-    public BancodeUsuarios(String login,String Senha){
+public class BancoDeUsuarios {
+    private static List<Usuario> List;
 
+    static {
+        List = new ArrayList<>();
+        List.add(new Usuario("usuario1", "senha1"));
+        List.add(new Usuario("usuario2", "senha2"));
+        List.add(new Usuario("usuario3", "senha3"));
     }
 
-    private void autenticar(Usuario usuarioValidar){
-        for (Usuario usuarioTeste : Users) {
-            
+    public static void authenticate(String login, String senha) throws AutenticacaoInvalidaException {
+        for (Usuario usuario : List) {
+            if (usuario.getLogin().equals(login) && usuario.getSenha().equals(senha)) {
+                System.out.println("Usuário autenticado: " + login);
+                return;
+            }
         }
+        throw new AutenticacaoInvalidaException("Usuário " + login + " não foi encontrado ou a senha está errada");
     }
-    private static void addUsuario(Usuario novoUser){
-        Users.add(novoUser);
+
+   
+ public static void addUsuario(Usuario usuario) {
+        List.add(usuario);
     }
-    
 }

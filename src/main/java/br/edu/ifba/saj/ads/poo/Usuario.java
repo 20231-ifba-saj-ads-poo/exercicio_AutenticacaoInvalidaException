@@ -1,20 +1,24 @@
 package br.edu.ifba.saj.ads.poo;
+
+
 public class Usuario {
+    private String login;
+    private String senha;
 
-    
-private String login;
-private String senha;
-
- public Usuario(String login,String senha){
- this.login = login;
- this.senha = senha;
- 
-}
-
-    public String getlogin(){
-        return this.login;
+    public Usuario(String login, String senha) {
+        this.login = login;
+        this.senha = senha;
     }
-    public String getsenha(){
-        return this.senha;
+
+    public String getLogin() {
+        return login;
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+
+
+
 }
