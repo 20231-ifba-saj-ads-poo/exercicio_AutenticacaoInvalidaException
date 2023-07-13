@@ -10,7 +10,7 @@
      public static void main(String[] args) {
          
          try {
-             BancoDeUsuarios.authenticate("login", "senha");
+             BancoDeUsuarios.autenticar("login", "senha");
          } catch (AutenticacaoInvalidaException e) {
              System.out.println(e.getMessage());
          }

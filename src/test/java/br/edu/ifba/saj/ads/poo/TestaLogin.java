@@ -22,7 +22,7 @@ public class TestaLogin {
         String senha = "senha";
         Usuario u = new Usuario(login,senha);
         BancoDeUsuarios.addUsuario(u);
-        BancoDeUsuarios.authenticate(login, senha);        
+        BancoDeUsuarios.autenticar(login, senha);        
     }
         
     @Test(expected = AutenticacaoInvalidaException.class)
@@ -30,6 +30,7 @@ public class TestaLogin {
         String login = "login9";
         String senha = "senha9";
         Usuario u = new Usuario(login,senha);
-        BancoDeUsuarios.authenticate(login, senha);        
+        BancoDeUsuarios.autenticar(login, senha);        
     }
 }
+

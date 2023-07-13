@@ -3,7 +3,7 @@ package br.edu.ifba.saj.ads.poo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BancoDeUsuarios {
+public class BancoDeUsuarios{
     private static List<Usuario> List;
 
     static {
@@ -13,7 +13,7 @@ public class BancoDeUsuarios {
         List.add(new Usuario("usuario3", "senha3"));
     }
 
-    public static void authenticate(String login, String senha) throws AutenticacaoInvalidaException {
+    public static void autenticar(String login, String senha) throws AutenticacaoInvalidaException {
         for (Usuario usuario : List) {
             if (usuario.getLogin().equals(login) && usuario.getSenha().equals(senha)) {
                 System.out.println("Usuário autenticado: " + login);
