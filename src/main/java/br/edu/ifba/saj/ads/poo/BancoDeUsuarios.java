@@ -14,8 +14,10 @@ public class BancoDeUsuarios {
     public static void autenticar(String login, String senha) throws AutenticacaoInvalidaException{
         for (Usuario usuario : usuarios) {
              if(usuario.getTxtNome().equals(login) && usuario.getTxtSenha().equals(senha)){
-            System.out.println("Usuario encontrado!");
+            System.out.println("Usuario: "+usuario.getTxtNome()+ " encontrado!");
+            return;
         }
       }
+      throw new AutenticacaoInvalidaException("Usuário: " + login + " não foi encontrado ou a senha está incorreta!");
     }
 }
