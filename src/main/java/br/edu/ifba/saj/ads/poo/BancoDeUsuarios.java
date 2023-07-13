@@ -10,11 +10,12 @@ public class BancoDeUsuarios {
     }
 
     public boolean autenticar(String login, String senha){
-        for (int i = 0; i<listaUsuarios.size(); i++){
-            if (listaUsuarios[i].getLogin().equals(login) && listaUsuarios[i].getSenha().equals(senha)){
+        for (Usuario i : listaUsuarios){
+            if (i.getLogin().equals(login) && i.getSenha().equals(senha)){
                 return true;
             }
             return false;
         }
+        return false;
     }
 }
