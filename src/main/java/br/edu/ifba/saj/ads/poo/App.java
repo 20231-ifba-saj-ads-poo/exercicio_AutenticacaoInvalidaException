@@ -8,11 +8,12 @@ package br.edu.ifba.saj.ads.poo;
 public class App {
     
     public static void main(String[] args) {
-        Usuario usuario = new Usuario("Login","senha");
-        BancoDeUsuarios.addUsuario(usuario);
 
-        if (BancoDeUsuarios.autenticar()){
-            
+        try{
+            BancoDeUsuarios.autenticar("Login1","senha1");
+            System.out.println("Usuário autenticado!");
+        }catch(AutenticacaoInvalidaException e){
+            System.out.println(e.getMessage());
         }
     }    
 }
