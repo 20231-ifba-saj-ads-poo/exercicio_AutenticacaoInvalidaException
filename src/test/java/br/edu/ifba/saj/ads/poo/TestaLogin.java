@@ -12,8 +12,8 @@ public class TestaLogin {
         String login = "login";
         String senha = "senha";
         Usuario u = new Usuario(login,senha);
-        assertEquals(login, u.getLogin());
-        assertEquals(senha, u.getSenha());        
+        assertEquals(login, u.getTxtNome());
+        assertEquals(senha, u.getTxtSenha());        
     }
         
     @Test
