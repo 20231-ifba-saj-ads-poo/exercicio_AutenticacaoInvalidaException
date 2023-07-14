@@ -8,6 +8,15 @@ package br.edu.ifba.saj.ads.poo;
 public class App {
     
     public static void main(String[] args) {
-        
+        String login = "login";
+        String senha = "senha";
+        Usuario usuario = new Usuario(login, senha);
+        BancoDeUsuarios.addUsuario(usuario);
+
+        try {
+            BancoDeUsuarios.autenticar(login, senha);
+        } catch (AutenticacaoInvalidaException e) {
+            System.out.println(e.getMessage());
+        }
     }    
 }
