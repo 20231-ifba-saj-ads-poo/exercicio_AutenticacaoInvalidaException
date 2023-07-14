@@ -13,14 +13,7 @@ public Usuario(String[] login, String[] senha) {
         Senha = senha;
     }
 
-public void setLogin(String[] login) {
-    Login = login;
-}
 
-
-public void setSenha(String[] senha) {
-    Senha = senha;
-}
 
     public String[] getLogin() {
     return Login;
@@ -29,16 +22,6 @@ public void setSenha(String[] senha) {
 public String[] getSenha() {
     return Senha;
 }
-
-public boolean verificarLogin(String Login, String Senha){
-    return this.Login.equals(Login) && this.Senha.equals(Senha);
-}
-
-public void add(Usuario bdusuarios) {
-}
-
-
-
 
     
 }
