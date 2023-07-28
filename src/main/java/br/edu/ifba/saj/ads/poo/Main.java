@@ -4,23 +4,23 @@ public class Main {
         BancoDeUsuarios.inicializarUsuarios();
 
        
-        String loginSucesso = "usuario1";
-        String senhaSucesso = "senha123";
+        String login1 = "usuario1";
+        String senha = "senha123";
 
         try {
-            BancoDeUsuarios.autenticar(loginSucesso, senhaSucesso);
-            System.out.println("Autenticação bem-sucedida para o usuário: " + loginSucesso);
+            BancoDeUsuarios.autenticar(login1, senha);
+            System.out.println("Autenticação bem-sucedida para o usuário: " + login1);
         } catch (AutenticacaoInvalidaException e) {
             System.out.println(e.getMessage());
         }
 
 
-        String loginFalha = "usuario2";
-        String senhaFalha = "senhaerrada";
+        String login2= "usuario2";
+        String outsenha = "senhaerrada";
 
         try {
-            BancoDeUsuarios.autenticar(loginFalha, senhaFalha);
-            System.out.println("Autenticação bem-sucedida para o usuário: " + loginFalha);
+            BancoDeUsuarios.autenticar(login2, outsenha);
+            System.out.println("Autenticação bem-sucedida para o usuário: " + login2);
         } catch (AutenticacaoInvalidaException e) {
             System.out.println(e.getMessage());
         }
