@@ -1,10 +1,10 @@
 package br.edu.ifba.saj.ads.poo;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class BancoDeUsuarios {
-    private static List<Usuario> List;
+    private static ArrayList<Usuario> List;
 
     static {
         List = new ArrayList<>();
