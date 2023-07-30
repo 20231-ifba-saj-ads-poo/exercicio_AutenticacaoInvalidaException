@@ -9,5 +9,10 @@ public class App {
     
     public static void main(String[] args) {
         
-    }    
+        try {
+            BancoDeUsuarios.autenticar("usuario1", "senha2");
+        } catch (AutenticacaoInvalidaException e) {
+            System.out.println(e.getMessage());
+        }
+    }  
 }
